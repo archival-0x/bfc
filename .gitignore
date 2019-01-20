@@ -1,0 +1,3 @@
+*.o
+brainfuck-cpp
+*.h.gch
