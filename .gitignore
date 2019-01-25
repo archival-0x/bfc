@@ -1,3 +1,10 @@
+*.out
 *.o
-brainfuck-cpp
+*.so
 *.h.gch
+
+brainfuck-cpp
+brainfuck-hs
+
+target/
+.stack-work/

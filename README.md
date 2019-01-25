@@ -20,9 +20,9 @@ A JIT compiler!
 
 With a nice parser and compiler!
 
-* Python 
+* Python/C
 
-Foreign function interface to the C++ implementation!
+Foreign function interface to a C implementation!
 
 * Golang
 
