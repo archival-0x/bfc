@@ -4,3 +4,4 @@ version = "0.1.0"
 authors = ["ex0dus-0x <ex0dus@codemuch.tech>"]
 
 [dependencies]
+dynasmrt = "0.3.0" 
