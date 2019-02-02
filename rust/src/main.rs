@@ -21,6 +21,9 @@ fn main() {
     if args.len() != 2 {
         println!("Expected one argument (.bf file), got {}", args.len());
     }
-   
-    // read file
+
+    // TODO: read file
+
+    let prog = BFInterpreter::new_program();
+    execute_jit(prog);
 }

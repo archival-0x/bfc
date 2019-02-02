@@ -1,10 +1,11 @@
 module Main where
 
-import System.Environment
-
 import Text.Parsec
 import Text.Parsec.String
 
+import Control.Monad.State
+import qualified Data.IntMap as M
+import Data.Word
 
 -- define brainfuck instruction type
 data BFInstruction = Back | Forward | Increment | Decrement |
@@ -50,6 +51,8 @@ parseInstruction = do
 -- main parser function
 parseInstructions :: Parser [BFInstruction]
 parseInstructions = many parseInstruction
+
+type BFRunner = StateT (Int, M.IntMap Word8) IO ()
 
 
 main :: IO ()
