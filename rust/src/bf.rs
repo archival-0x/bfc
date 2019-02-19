@@ -33,6 +33,8 @@ pub struct BFInterpreter {
 pub enum BFError {
     InvalidInstruction,
     BadTapeSize,
+    RuntimeOverflow,
+    RuntimeEndOfLoop
 }
 
 
@@ -76,13 +78,5 @@ impl BFInterpreter {
     /// (default is 30,000).
     pub fn override_tape(&mut self, size: usize) -> () {
         self.tape_size = size;
-    }
-
-
-    /// executes the program that was loaded and parsed.
-    pub fn normal_exec(&self) -> Result<(), BFError> {
-        
-        
-        Ok(())
     }
 }

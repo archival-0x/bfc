@@ -4,4 +4,6 @@ version = "0.1.0"
 authors = ["ex0dus-0x <ex0dus@codemuch.tech>"]
 
 [dependencies]
+itertools = "0.8.0"
 dynasmrt = "0.3.0" 
+
