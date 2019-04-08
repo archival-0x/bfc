@@ -1,11 +1,11 @@
-// Code generated from brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
+// Code generated from Brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
 
-package parser // brainfuck
+package parser // Brainfuck
 
 import "github.com/antlr/antlr4/runtime/Go/antlr"
 
-// brainfuckListener is a complete listener for a parse tree produced by brainfuckParser.
-type brainfuckListener interface {
+// BrainfuckListener is a complete listener for a parse tree produced by BrainfuckParser.
+type BrainfuckListener interface {
 	antlr.ParseTreeListener
 
 	// EnterFile is called when entering the file production.

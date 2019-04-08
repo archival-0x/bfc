@@ -1,4 +1,4 @@
-// Code generated from brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
+// Code generated from Brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
 
 package parser
 
@@ -56,7 +56,7 @@ var lexerRuleNames = []string{
 	"GT", "LT", "PLUS", "MINUS", "DOT", "COMMA", "LPAREN", "RPAREN", "WS",
 }
 
-type brainfuckLexer struct {
+type BrainfuckLexer struct {
 	*antlr.BaseLexer
 	channelNames []string
 	modeNames    []string
@@ -71,9 +71,9 @@ func init() {
 	}
 }
 
-func NewbrainfuckLexer(input antlr.CharStream) *brainfuckLexer {
+func NewBrainfuckLexer(input antlr.CharStream) *BrainfuckLexer {
 
-	l := new(brainfuckLexer)
+	l := new(BrainfuckLexer)
 
 	l.BaseLexer = antlr.NewBaseLexer(input)
 	l.Interpreter = antlr.NewLexerATNSimulator(l, lexerAtn, lexerDecisionToDFA, antlr.NewPredictionContextCache())
@@ -83,21 +83,21 @@ func NewbrainfuckLexer(input antlr.CharStream) *brainfuckLexer {
 	l.RuleNames = lexerRuleNames
 	l.LiteralNames = lexerLiteralNames
 	l.SymbolicNames = lexerSymbolicNames
-	l.GrammarFileName = "brainfuck.g4"
+	l.GrammarFileName = "Brainfuck.g4"
 	// TODO: l.EOF = antlr.TokenEOF
 
 	return l
 }
 
-// brainfuckLexer tokens.
+// BrainfuckLexer tokens.
 const (
-	brainfuckLexerGT     = 1
-	brainfuckLexerLT     = 2
-	brainfuckLexerPLUS   = 3
-	brainfuckLexerMINUS  = 4
-	brainfuckLexerDOT    = 5
-	brainfuckLexerCOMMA  = 6
-	brainfuckLexerLPAREN = 7
-	brainfuckLexerRPAREN = 8
-	brainfuckLexerWS     = 9
+	BrainfuckLexerGT     = 1
+	BrainfuckLexerLT     = 2
+	BrainfuckLexerPLUS   = 3
+	BrainfuckLexerMINUS  = 4
+	BrainfuckLexerDOT    = 5
+	BrainfuckLexerCOMMA  = 6
+	BrainfuckLexerLPAREN = 7
+	BrainfuckLexerRPAREN = 8
+	BrainfuckLexerWS     = 9
 )

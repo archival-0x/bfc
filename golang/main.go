@@ -2,25 +2,23 @@ package main
 
 import (
     "fmt"
-    "io/ioutil"
     "os"
+    "io/ioutil"
 
-    "github.com/antlr/antlr4/runtime/Go/antlr"
     "./parser"
+    "github.com/antlr/antlr4/runtime/Go/antlr"
 )
 
 type BFListener struct {
-    *parser.BasebrainfuckListener
+    *parser.BaseBrainfuckListener
     tape []int
 }
 
-
+/*
 type BFListener interface {
-    antlr ParseTreeListener
-
-    // TODO interface logic
+    antlr.ParseTreeListener
 }
-
+*/
 
 func main() {
 
@@ -33,12 +31,15 @@ func main() {
     }
 
     // initialize input with ANTLR
-    in_stream = antlr.NewInputStream(code)
+    in_stream := antlr.NewInputStream(string(code))
 
     // create lexer
-    lexer := parser.NewbrainfuckLexer(in_stream)
+    lexer := parser.NewBrainfuckLexer(in_stream)
     stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
 
     // create parser
-    parser := parser.NewbrainfuckParser(stream)
+    parser := parser.NewBrainfuckParser(stream)
+
+    // parse input expression
+    antlr.ParseTreeWalkerDefault.Walk(&BFListener{}, parser.Start())
 }

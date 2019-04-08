@@ -1,40 +1,40 @@
-// Code generated from brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
+// Code generated from Brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
 
-package parser // brainfuck
+package parser // Brainfuck
 
 import "github.com/antlr/antlr4/runtime/Go/antlr"
 
-// BasebrainfuckListener is a complete listener for a parse tree produced by brainfuckParser.
-type BasebrainfuckListener struct{}
+// BaseBrainfuckListener is a complete listener for a parse tree produced by BrainfuckParser.
+type BaseBrainfuckListener struct{}
 
-var _ brainfuckListener = &BasebrainfuckListener{}
+var _ BrainfuckListener = &BaseBrainfuckListener{}
 
 // VisitTerminal is called when a terminal node is visited.
-func (s *BasebrainfuckListener) VisitTerminal(node antlr.TerminalNode) {}
+func (s *BaseBrainfuckListener) VisitTerminal(node antlr.TerminalNode) {}
 
 // VisitErrorNode is called when an error node is visited.
-func (s *BasebrainfuckListener) VisitErrorNode(node antlr.ErrorNode) {}
+func (s *BaseBrainfuckListener) VisitErrorNode(node antlr.ErrorNode) {}
 
 // EnterEveryRule is called when any rule is entered.
-func (s *BasebrainfuckListener) EnterEveryRule(ctx antlr.ParserRuleContext) {}
+func (s *BaseBrainfuckListener) EnterEveryRule(ctx antlr.ParserRuleContext) {}
 
 // ExitEveryRule is called when any rule is exited.
-func (s *BasebrainfuckListener) ExitEveryRule(ctx antlr.ParserRuleContext) {}
+func (s *BaseBrainfuckListener) ExitEveryRule(ctx antlr.ParserRuleContext) {}
 
 // EnterFile is called when production file is entered.
-func (s *BasebrainfuckListener) EnterFile(ctx *FileContext) {}
+func (s *BaseBrainfuckListener) EnterFile(ctx *FileContext) {}
 
 // ExitFile is called when production file is exited.
-func (s *BasebrainfuckListener) ExitFile(ctx *FileContext) {}
+func (s *BaseBrainfuckListener) ExitFile(ctx *FileContext) {}
 
 // EnterStatement is called when production statement is entered.
-func (s *BasebrainfuckListener) EnterStatement(ctx *StatementContext) {}
+func (s *BaseBrainfuckListener) EnterStatement(ctx *StatementContext) {}
 
 // ExitStatement is called when production statement is exited.
-func (s *BasebrainfuckListener) ExitStatement(ctx *StatementContext) {}
+func (s *BaseBrainfuckListener) ExitStatement(ctx *StatementContext) {}
 
 // EnterOpcode is called when production opcode is entered.
-func (s *BasebrainfuckListener) EnterOpcode(ctx *OpcodeContext) {}
+func (s *BaseBrainfuckListener) EnterOpcode(ctx *OpcodeContext) {}
 
 // ExitOpcode is called when production opcode is exited.
-func (s *BasebrainfuckListener) ExitOpcode(ctx *OpcodeContext) {}
+func (s *BaseBrainfuckListener) ExitOpcode(ctx *OpcodeContext) {}

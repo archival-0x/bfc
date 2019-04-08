@@ -1,6 +1,6 @@
-// Code generated from brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
+// Code generated from Brainfuck.g4 by ANTLR 4.7.1. DO NOT EDIT.
 
-package parser // brainfuck
+package parser // Brainfuck
 
 import (
 	"fmt"
@@ -50,12 +50,12 @@ func init() {
 	}
 }
 
-type brainfuckParser struct {
+type BrainfuckParser struct {
 	*antlr.BaseParser
 }
 
-func NewbrainfuckParser(input antlr.TokenStream) *brainfuckParser {
-	this := new(brainfuckParser)
+func NewBrainfuckParser(input antlr.TokenStream) *BrainfuckParser {
+	this := new(BrainfuckParser)
 
 	this.BaseParser = antlr.NewBaseParser(input)
 
@@ -63,30 +63,30 @@ func NewbrainfuckParser(input antlr.TokenStream) *brainfuckParser {
 	this.RuleNames = ruleNames
 	this.LiteralNames = literalNames
 	this.SymbolicNames = symbolicNames
-	this.GrammarFileName = "brainfuck.g4"
+	this.GrammarFileName = "Brainfuck.g4"
 
 	return this
 }
 
-// brainfuckParser tokens.
+// BrainfuckParser tokens.
 const (
-	brainfuckParserEOF    = antlr.TokenEOF
-	brainfuckParserGT     = 1
-	brainfuckParserLT     = 2
-	brainfuckParserPLUS   = 3
-	brainfuckParserMINUS  = 4
-	brainfuckParserDOT    = 5
-	brainfuckParserCOMMA  = 6
-	brainfuckParserLPAREN = 7
-	brainfuckParserRPAREN = 8
-	brainfuckParserWS     = 9
+	BrainfuckParserEOF    = antlr.TokenEOF
+	BrainfuckParserGT     = 1
+	BrainfuckParserLT     = 2
+	BrainfuckParserPLUS   = 3
+	BrainfuckParserMINUS  = 4
+	BrainfuckParserDOT    = 5
+	BrainfuckParserCOMMA  = 6
+	BrainfuckParserLPAREN = 7
+	BrainfuckParserRPAREN = 8
+	BrainfuckParserWS     = 9
 )
 
-// brainfuckParser rules.
+// BrainfuckParser rules.
 const (
-	brainfuckParserRULE_file      = 0
-	brainfuckParserRULE_statement = 1
-	brainfuckParserRULE_opcode    = 2
+	BrainfuckParserRULE_file      = 0
+	BrainfuckParserRULE_statement = 1
+	BrainfuckParserRULE_opcode    = 2
 )
 
 // IFileContext is an interface to support dynamic dispatch.
@@ -108,7 +108,7 @@ type FileContext struct {
 func NewEmptyFileContext() *FileContext {
 	var p = new(FileContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = brainfuckParserRULE_file
+	p.RuleIndex = BrainfuckParserRULE_file
 	return p
 }
 
@@ -120,7 +120,7 @@ func NewFileContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokin
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = brainfuckParserRULE_file
+	p.RuleIndex = BrainfuckParserRULE_file
 
 	return p
 }
@@ -159,20 +159,20 @@ func (s *FileContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) s
 }
 
 func (s *FileContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(brainfuckListener); ok {
+	if listenerT, ok := listener.(BrainfuckListener); ok {
 		listenerT.EnterFile(s)
 	}
 }
 
 func (s *FileContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(brainfuckListener); ok {
+	if listenerT, ok := listener.(BrainfuckListener); ok {
 		listenerT.ExitFile(s)
 	}
 }
 
-func (p *brainfuckParser) File() (localctx IFileContext) {
+func (p *BrainfuckParser) File() (localctx IFileContext) {
 	localctx = NewFileContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 0, brainfuckParserRULE_file)
+	p.EnterRule(localctx, 0, BrainfuckParserRULE_file)
 	var _la int
 
 	defer func() {
@@ -196,7 +196,7 @@ func (p *brainfuckParser) File() (localctx IFileContext) {
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
-	for ((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<brainfuckParserGT)|(1<<brainfuckParserLT)|(1<<brainfuckParserPLUS)|(1<<brainfuckParserMINUS)|(1<<brainfuckParserDOT)|(1<<brainfuckParserCOMMA)|(1<<brainfuckParserLPAREN))) != 0 {
+	for ((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<BrainfuckParserGT)|(1<<BrainfuckParserLT)|(1<<BrainfuckParserPLUS)|(1<<BrainfuckParserMINUS)|(1<<BrainfuckParserDOT)|(1<<BrainfuckParserCOMMA)|(1<<BrainfuckParserLPAREN))) != 0 {
 		{
 			p.SetState(6)
 			p.Statement()
@@ -229,7 +229,7 @@ type StatementContext struct {
 func NewEmptyStatementContext() *StatementContext {
 	var p = new(StatementContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = brainfuckParserRULE_statement
+	p.RuleIndex = BrainfuckParserRULE_statement
 	return p
 }
 
@@ -241,7 +241,7 @@ func NewStatementContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = brainfuckParserRULE_statement
+	p.RuleIndex = BrainfuckParserRULE_statement
 
 	return p
 }
@@ -259,11 +259,11 @@ func (s *StatementContext) Opcode() IOpcodeContext {
 }
 
 func (s *StatementContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserLPAREN, 0)
+	return s.GetToken(BrainfuckParserLPAREN, 0)
 }
 
 func (s *StatementContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserRPAREN, 0)
+	return s.GetToken(BrainfuckParserRPAREN, 0)
 }
 
 func (s *StatementContext) AllStatement() []IStatementContext {
@@ -298,20 +298,20 @@ func (s *StatementContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 }
 
 func (s *StatementContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(brainfuckListener); ok {
+	if listenerT, ok := listener.(BrainfuckListener); ok {
 		listenerT.EnterStatement(s)
 	}
 }
 
 func (s *StatementContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(brainfuckListener); ok {
+	if listenerT, ok := listener.(BrainfuckListener); ok {
 		listenerT.ExitStatement(s)
 	}
 }
 
-func (p *brainfuckParser) Statement() (localctx IStatementContext) {
+func (p *BrainfuckParser) Statement() (localctx IStatementContext) {
 	localctx = NewStatementContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 2, brainfuckParserRULE_statement)
+	p.EnterRule(localctx, 2, BrainfuckParserRULE_statement)
 	var _la int
 
 	defer func() {
@@ -334,24 +334,24 @@ func (p *brainfuckParser) Statement() (localctx IStatementContext) {
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
-	case brainfuckParserGT, brainfuckParserLT, brainfuckParserPLUS, brainfuckParserMINUS, brainfuckParserDOT, brainfuckParserCOMMA:
+	case BrainfuckParserGT, BrainfuckParserLT, BrainfuckParserPLUS, BrainfuckParserMINUS, BrainfuckParserDOT, BrainfuckParserCOMMA:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(12)
 			p.Opcode()
 		}
 
-	case brainfuckParserLPAREN:
+	case BrainfuckParserLPAREN:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(13)
-			p.Match(brainfuckParserLPAREN)
+			p.Match(BrainfuckParserLPAREN)
 		}
 		p.SetState(17)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
-		for ((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<brainfuckParserGT)|(1<<brainfuckParserLT)|(1<<brainfuckParserPLUS)|(1<<brainfuckParserMINUS)|(1<<brainfuckParserDOT)|(1<<brainfuckParserCOMMA)|(1<<brainfuckParserLPAREN))) != 0 {
+		for ((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<BrainfuckParserGT)|(1<<BrainfuckParserLT)|(1<<BrainfuckParserPLUS)|(1<<BrainfuckParserMINUS)|(1<<BrainfuckParserDOT)|(1<<BrainfuckParserCOMMA)|(1<<BrainfuckParserLPAREN))) != 0 {
 			{
 				p.SetState(14)
 				p.Statement()
@@ -363,7 +363,7 @@ func (p *brainfuckParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(20)
-			p.Match(brainfuckParserRPAREN)
+			p.Match(BrainfuckParserRPAREN)
 		}
 
 	default:
@@ -392,7 +392,7 @@ type OpcodeContext struct {
 func NewEmptyOpcodeContext() *OpcodeContext {
 	var p = new(OpcodeContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = brainfuckParserRULE_opcode
+	p.RuleIndex = BrainfuckParserRULE_opcode
 	return p
 }
 
@@ -404,7 +404,7 @@ func NewOpcodeContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = brainfuckParserRULE_opcode
+	p.RuleIndex = BrainfuckParserRULE_opcode
 
 	return p
 }
@@ -412,27 +412,27 @@ func NewOpcodeContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 func (s *OpcodeContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *OpcodeContext) GT() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserGT, 0)
+	return s.GetToken(BrainfuckParserGT, 0)
 }
 
 func (s *OpcodeContext) LT() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserLT, 0)
+	return s.GetToken(BrainfuckParserLT, 0)
 }
 
 func (s *OpcodeContext) PLUS() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserPLUS, 0)
+	return s.GetToken(BrainfuckParserPLUS, 0)
 }
 
 func (s *OpcodeContext) MINUS() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserMINUS, 0)
+	return s.GetToken(BrainfuckParserMINUS, 0)
 }
 
 func (s *OpcodeContext) DOT() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserDOT, 0)
+	return s.GetToken(BrainfuckParserDOT, 0)
 }
 
 func (s *OpcodeContext) COMMA() antlr.TerminalNode {
-	return s.GetToken(brainfuckParserCOMMA, 0)
+	return s.GetToken(BrainfuckParserCOMMA, 0)
 }
 
 func (s *OpcodeContext) GetRuleContext() antlr.RuleContext {
@@ -444,20 +444,20 @@ func (s *OpcodeContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 }
 
 func (s *OpcodeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(brainfuckListener); ok {
+	if listenerT, ok := listener.(BrainfuckListener); ok {
 		listenerT.EnterOpcode(s)
 	}
 }
 
 func (s *OpcodeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(brainfuckListener); ok {
+	if listenerT, ok := listener.(BrainfuckListener); ok {
 		listenerT.ExitOpcode(s)
 	}
 }
 
-func (p *brainfuckParser) Opcode() (localctx IOpcodeContext) {
+func (p *BrainfuckParser) Opcode() (localctx IOpcodeContext) {
 	localctx = NewOpcodeContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 4, brainfuckParserRULE_opcode)
+	p.EnterRule(localctx, 4, BrainfuckParserRULE_opcode)
 	var _la int
 
 	defer func() {
@@ -481,7 +481,7 @@ func (p *brainfuckParser) Opcode() (localctx IOpcodeContext) {
 		p.SetState(23)
 		_la = p.GetTokenStream().LA(1)
 
-		if !(((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<brainfuckParserGT)|(1<<brainfuckParserLT)|(1<<brainfuckParserPLUS)|(1<<brainfuckParserMINUS)|(1<<brainfuckParserDOT)|(1<<brainfuckParserCOMMA))) != 0) {
+		if !(((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<BrainfuckParserGT)|(1<<BrainfuckParserLT)|(1<<BrainfuckParserPLUS)|(1<<BrainfuckParserMINUS)|(1<<BrainfuckParserDOT)|(1<<BrainfuckParserCOMMA))) != 0) {
 			p.GetErrorHandler().RecoverInline(p)
 		} else {
 			p.GetErrorHandler().ReportMatch(p)

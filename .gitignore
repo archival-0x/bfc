@@ -6,5 +6,6 @@
 brainfuck-cpp
 brainfuck-hs
 
+golang/parser
 target/
 .stack-work/
