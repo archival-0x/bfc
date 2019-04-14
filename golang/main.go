@@ -11,14 +11,13 @@ import (
 
 type BFListener struct {
     *parser.BaseBrainfuckListener
-    tape []int
+    tape []byte
 }
 
-/*
-type BFListener interface {
-    antlr.ParseTreeListener
+func (b *BFListener) push(i int) {
+
 }
-*/
+
 
 func main() {
 
@@ -35,11 +34,23 @@ func main() {
 
     // create lexer
     lexer := parser.NewBrainfuckLexer(in_stream)
+
+    for {
+        t := lexer.NextToken()
+        if t.GetTokenType() == antlr.TokenEOF {
+            break
+        }
+        fmt.Printf("%s (%q)\n",
+            lexer.SymbolicNames[t.GetTokenType()], t.GetText())
+    }
+
     stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
 
     // create parser
     parser := parser.NewBrainfuckParser(stream)
+    parser.BuildParseTrees = true
+    parser.AddErrorListener(antlr.NewDiagnosticErrorListener(true))
 
     // parse input expression
-    antlr.ParseTreeWalkerDefault.Walk(&BFListener{}, parser.Start())
+    antlr.ParseTreeWalkerDefault.Walk(&BFListener{}, parser.File())
 }
